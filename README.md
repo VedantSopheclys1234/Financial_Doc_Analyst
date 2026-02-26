@@ -36,3 +36,24 @@ The system analyzes financial documents like Tesla's Q2 2025 financial update.
 - Investment recommendations
 - Risk assessment
 - Market insights
+
+- Setup Instructions
+git clone <repo>
+cd project
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+
+Create .env:
+
+GOOGLE_API_KEY=your_key
+SERPER_API_KEY=your_key
+
+Run:
+
+uvicorn main:app --reload
+🔹 API Example
+POST /analyze
+{
+  "pdf_path": "data/sample.pdf"
+}
