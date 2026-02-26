@@ -37,7 +37,7 @@ The system analyzes financial documents like Tesla's Q2 2025 financial update.
 - Risk assessment
 - Market insights
 
-- Setup Instructions
+#Setup Instructions
 git clone <repo>
 cd project
 python -m venv venv
