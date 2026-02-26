@@ -1,4 +1,4 @@
-Bug 1: InvestmentTool and RiskTool Methods Missing self
+## Bug 1: InvestmentTool and RiskTool Methods Missing self
 Description
 
 The methods inside InvestmentTool and RiskTool were defined without the self parameter while being placed inside a class.
@@ -26,7 +26,7 @@ Impact
 
 Prevents runtime crashes when tools are instantiated and executed by CrewAI.
 
-Bug 2: Inefficient and Unsafe Double-Space Cleanup Logic
+# Bug 2: Inefficient and Unsafe Double-Space Cleanup Logic
 Description
 
 The original implementation removed double spaces using manual string slicing:
@@ -60,7 +60,8 @@ Makes code readable
 
 Prevents subtle string manipulation bugs
 
-Bug 3: Missing PyPDFLoader Import in FinancialDocumentTool
+
+# Bug 3: Missing PyPDFLoader Import in FinancialDocumentTool
 Description
 
 Pdf was used but never imported or defined:
@@ -83,7 +84,7 @@ Impact
 
 Enables proper PDF loading functionality.
 
-Bug 4: Missing langchain Dependency
+# Bug 4: Missing langchain Dependency
 Description
 
 PyPDFLoader requires langchain, but requirements.txt only included:
@@ -106,7 +107,7 @@ Impact
 
 Prevents module import failure.
 
-Bug 5: Missing uvicorn Dependency
+# Bug 5: Missing uvicorn Dependency
 Description
 
 main.py runs:
@@ -126,7 +127,7 @@ Impact
 
 Allows FastAPI app to start successfully.
 
-Bug 6: Pydantic Version Conflict
+# Bug 6: Pydantic Version Conflict
 Description
 
 requirements.txt included:
@@ -151,7 +152,7 @@ Impact
 
 Prevents runtime schema validation failures.
 
-Bug 7: Unnecessary Google Cloud Dependency Bloat
+# Bug 7: Unnecessary Google Cloud Dependency Bloat
 Description
 
 Multiple unused Google Cloud packages were included:
@@ -188,7 +189,7 @@ Lower conflict risk
 
 Cleaner production-grade environment
 
-Bug 8: Environment Variable Dependency Not Documented
+# Bug 8: Environment Variable Dependency Not Documented
 Description
 
 SerperDevTool() requires:
@@ -206,5 +207,6 @@ Fix Applied
 Documented required environment variables in README.
 
 Impact
+
 
 Improves deployment reliability and clarity.
